@@ -1,0 +1,268 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body .container {
+    margin: 0px auto;
+    width: 95%;
+}
+
+/* --------Header 1--------- */
+
+header .container .header_1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f5f5;
+    padding: 5px 0px;
+}
+
+header .container .header_1 .h1_right {
+    display: flex;
+    align-items: center;
+}
+
+header .container .header_1 .h1_right li {
+    display: flex;
+    align-items: center;
+}
+
+header .container .header_1 .h1_right li .xoay {
+    transform: rotate(90deg);
+}
+
+header .container .header_1 .h1_right li h5 {
+    cursor: pointer;
+    transition: all 0.1s ease-in-out
+}
+
+header .container .header_1 .h1_right li h5:hover {
+    color: #ccc;
+    transition: all 0.1s ease-in-out
+}
+
+/* --------Header 1--------- */
+
+
+/* --------Header 2--------- */
+header .container .header_2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+header .container .header_2 .h2_left {
+    width: 25%;
+}
+
+header .container .header_2 .h2_middle {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+header .container .header_2 .h2_middle li {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+header .container .header_2 .h2_middle li::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: black;
+    left: 0;
+    bottom: -10px;
+    visibility: hidden;
+}
+
+header .container .header_2 .h2_middle li:hover::before {
+    visibility: visible;
+}
+
+header .container .header_2 .h2_right {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+}
+
+header .container .header_2 .h2_right .h2_right_bg1 {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.05s linear;
+}
+
+header .container .header_2 .h2_right .h2_right_bg1:hover {
+    background: #ccc;
+    transition: all 0.05s linear;
+}
+
+header .container .header_2 .h2_right .h2_search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    width: 200px;
+    overflow: hidden;
+    background: #e5e5e5;
+    transition: all 0.1s linear;
+}
+
+header .container .header_2 .h2_right .h2_search .h2_right_bg1 {
+    width: 50px;
+    transition: all 0.1s linear;
+}
+
+header .container .header_2 .h2_right .h2_search .h2_right_bg1 span {
+    font-size: 30px;
+    transition: all 0.1s linear;
+}
+
+header .container .header_2 .h2_right .h2_search .h2_searchbar {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: transparent;
+    font-size: 20px;
+    background: #e5e5e5;
+}
+
+header .container .header_2 .h2_right .h2_search:hover {
+    transition: all 0.1s linear;
+    background: #ccc;
+}
+
+header .container .header_2 .h2_right .h2_search:hover .h2_searchbar,
+header .container .header_2 .h2_right .h2_search:hover .h2_right_bg1 {
+    transition: all 0.1s linear;
+    color: black;
+    background: #ccc;
+}
+
+/* --------Header 2--------- */
+
+/* ------------------MAIN PAGE--------------------- */
+
+body #mainpage .container {
+    margin: 100px auto;
+}
+
+body #mainpage .container .sort {
+    display: flex;
+    justify-content: space-between;
+}
+
+body #mainpage .container .sort .sort_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+body #mainpage .container .sort .sort_right li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* ------------------Mainpage Products--------------------- */
+body #mainpage .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+body #mainpage .products .product_item {
+    width: 33%;
+    height: 810px;
+    display: inline-block;
+}
+
+/* body #mainpage .products .product_item .item_image {
+    width: 100%;
+} */
+
+body #mainpage .products .product_item .item_image img {
+    width: 100%;
+}
+
+body #mainpage .products .product_item .item_info .info_special {
+    color: #ff5000;
+    font-size: 18px;
+}
+
+body #mainpage .products .product_item .item_info .info_name {
+    margin: 5px 0px;
+    font-size: 18px;
+}
+
+body #mainpage .products .product_item .item_info .info_type,
+body #mainpage .products .product_item .item_info .info_color {
+    margin: 5px 0px;
+    color: gray;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+body #mainpage .products .product_item .item_info .info_price {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+body #mainpage .products .product_item .item_info .info1 {
+    visibility: visible;
+    display: block;
+}
+
+body #mainpage .products .product_item .item_info .info2 {
+    opacity: 0;
+
+}
+
+body #mainpage .products .product_item .item_info .info2 .info2_another_color {
+    overflow: hidden;
+
+}
+
+body #mainpage .products .product_item .item_info .info2 .info2_another_info {
+    transform: translateY(-100%);
+    transition: all 0.15s ease-in-out;
+
+
+}
+
+body #mainpage .products .product_item:hover .info1 {
+    visibility: hidden;
+    display: none;
+}
+
+
+body #mainpage .products .product_item:hover .info2 {
+    opacity: 1;
+}
+
+body #mainpage .products .product_item:hover .info2 .info2_another_info {
+    transform: translateY(0);
+    transition: all 0.15s ease-in-out;
+}
