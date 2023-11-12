@@ -30,6 +30,16 @@ header .container .header_1 .h1_right li {
     align-items: center;
 }
 
+header .container .header_1 .h1_right li .signin_signup {
+    display: flex;
+    align-items: center;
+}
+
+header .container .header_1 .h1_right li .profile_signout {
+    display: flex;
+    align-items: center;
+}
+
 header .container .header_1 .h1_right li .xoay {
     transform: rotate(90deg);
 }

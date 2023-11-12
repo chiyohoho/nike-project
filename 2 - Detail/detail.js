@@ -6,6 +6,55 @@ const currentURL = window.location.href
 const parts = currentURL.split("?");
 const idItem = parts[1].split("=")[1];
 // -------------------------------------
+const showSignOption = callElement("#sign_option")
+const showProfile = callElement("#profile")
+let token = JSON.parse(localStorage.getItem("user_token"))
+
+const showHeader = () => {
+    if (token) {
+        showProfile.style.display = "block"
+        showSignOption.style.display = "none"
+    } else {
+        showProfile.style.display = "none"
+        showSignOption.style.display = "block"
+    }
+
+    axios({
+        method: 'post',
+        url: 'https://shop.cyberlearn.vn/api/Users/getProfile',
+        headers: { Authorization: `Bearer ${token}` }
+    }).then(response => {
+        let dataUser = response.data.content
+        let strHeader = `
+        <div class="profile_signout">
+        <a href="http://127.0.0.1:5500/4%20-%20Edit%20User/edit.html" style="text-decoration: none; color: black;">
+            <h5>Hi, ${dataUser.name}</h5>
+        </a>
+
+        <span class="material-symbols-outlined xoay">
+            horizontal_rule
+        </span>
+
+        <h5 onclick="signOut()">Sign Out</h5>
+    </div>
+    `
+        showProfile.innerHTML = strHeader
+    }).catch(error => {
+        console.log("check error nè : ", error)
+    })
+
+
+}
+showHeader()
+
+const signOut = () => {
+    if (!token) {
+        window.location.href = `http://127.0.0.1:5500/1%20-%20Main/main.html`
+    } else {
+        localStorage.removeItem("user_token")
+        window.location.href = `http://127.0.0.1:5500/1%20-%20Main/main.html`
+    }
+}
 
 const getByID = () => {
     axios({
